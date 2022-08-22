@@ -6,9 +6,22 @@ function makeGrid(rows, cols) {
 
     for (i = 0; i < (rows * cols); i++) {
         let cell = document.createElement("div");
-        cell.innerText = i + 1;
         container.appendChild(cell).className = "grid-item";
+        cell.id = `grid-item${i+1}`;
     };
 };
 
-makeGrid(16, 16);
+
+let userInput = prompt("Please enter your grid size")
+const rows = userInput;
+const cols = userInput;
+makeGrid(rows, cols);
+
+function changeClass(e) {
+    e.target.classList.add("hovered");
+};
+
+for ((i = 0); i < (rows * cols); i++) {
+    let item = document.getElementById(`grid-item${i+1}`);
+    item.addEventListener('mouseenter', changeClass);
+};

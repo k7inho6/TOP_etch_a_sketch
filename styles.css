@@ -4,14 +4,21 @@
 }
 
 #container {
+    background-color: lightgray;
+    max-width: 800px;
+    max-height: 800px;
     display: grid;
-    grid-gap: .1em;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-gap: .03em;
+    grid-template-rows: repeat(var(--grid-rows), .5fr);
+    grid-template-columns: repeat(var(--grid-cols), .1fr);
 }
 
 .grid-item {
-    padding: 1em;
-    border: 1px solid black;
+    padding: 30%;
+    border: .2px solid;
     text-align: center;
+}
+
+.hovered {
+    background-color: lightblue;
 }
