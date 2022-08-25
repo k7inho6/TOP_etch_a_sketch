@@ -3,22 +3,33 @@
     --grid-rows: 1;
 }
 
+#header {
+    display: flex;
+    width: 800px;
+}
+
+#resetButton {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
 #container {
-    background-color: lightgray;
-    max-width: 800px;
-    max-height: 800px;
+    width: 800px;
+    height: 800px;
     display: grid;
-    grid-gap: .03em;
-    grid-template-rows: repeat(var(--grid-rows), .5fr);
-    grid-template-columns: repeat(var(--grid-cols), .1fr);
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    overflow: hidden;
 }
 
 .grid-item {
-    padding: 30%;
-    border: .2px solid;
-    text-align: center;
+    background-color: lightgray;
 }
 
 .hovered {
-    background-color: lightblue;
+    background-color: black;
 }
