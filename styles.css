@@ -66,11 +66,11 @@ body {
     text-align: center;
     transition: all;
     transition-duration: .2s;
-};
+}
 
 #resetButton:hover {
     cursor: pointer;
-    background-color: white;
-};
+    background-color: #484646;
+}
 
 
